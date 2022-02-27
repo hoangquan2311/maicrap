@@ -1,0 +1,92 @@
+@media (max-width: 739px) {
+    
+    #logo p {
+        display: none !important;
+    }
+
+    #nav a {
+        font-size: 36px !important;
+        padding-bottom: 6px !important;
+    }
+
+    #nav li:first-child a {
+        font-size: 26px !important;
+        padding: 4px 4px 2px 0 !important;
+    }
+
+    #home .section-heading {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        max-width: 150px !important;
+    }
+
+    #home .content-section {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    #discord, #youtube {
+        max-width: 100% !important;
+    }
+
+    #discord .discord-info {
+        margin-left: 12px !important;
+    }
+
+    #discord .discord-name {
+        font-size: 30px !important;
+    }
+
+    #discord .status {
+        font-size: 22px !important;
+    }
+
+    #youtube .youtube-info {
+        margin-left: 12px !important;
+    }
+
+    #maps .map-section {
+        flex-direction: column;
+        margin: 0 0 16px !important;
+        max-width: 100% !important;
+    }
+
+    #maps .map-img {
+        max-width: 92% !important;
+        margin: 12px auto !important;
+    }
+
+    #maps .map-info {
+        padding: 0 12px 12px;
+    }
+
+    #maps .map-right {
+        margin: 0 auto !important;
+        padding: 0 !important;
+    }
+
+    #maps .map-name {
+        text-align: center;
+    }
+
+    #maps .map-info p {
+        font-size: 24px;
+    }
+
+    #command .section-heading {
+        padding-bottom: 12px !important;
+    }
+
+    #command .section-info {
+        display: inline-block !important;
+    }
+
+    #command .command-section {
+        display: none;
+    }
+
+    .ore, .meme {
+        display: none;
+    }
+
+}
