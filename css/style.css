@@ -1,12 +1,3 @@
-@font-face {
-    font-family: 'Exo';
-    src: url(../fonts/Exo-VariableFont_wght.ttf);
-}
-
-@font-face {
-    font-family: 'Minecraft';
-    src: url(../fonts/SVNCodersCrux.otf);
-}
 *{
     padding: 0;
     margin: 0;
@@ -15,848 +6,386 @@
 
 html {
     scroll-behavior: smooth;
-    font-family: 'Minecraft', Arial, Helvetica, sans-serif;
-    background-color: rgba(0,0,0,0.5);
-    cursor: url('../img/cursor30px.png'), auto;
-}
-
-p, h1, h2, h3, a {
-    color: #fff;
-    font-size: 32px;
-    text-shadow: 2px 2px rgba(0,0,0,0.7);
-    /* cursor: default; */
-    text-decoration: none;
-}
-
-#logo {
-    width: 100%;
-    position: relative;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-image: url(../img/stone.jpg);
-    background-size: 80px;
-    text-align: center;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
 #header {
+    position: fixed;
+    height: 60px;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #000;
+    padding: 0 12px;
+    z-index: 1;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+#header .header-center {
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
-    justify-content: center;
 }
 
-#logo img{
-    display: inline-block;
-    max-width: 100px;
-    padding: 12px 0;
-}
-
-#logo p {
-    display: inline-block;
-    font-size: 72px;
-    line-height: 100px;
-    padding: 12px 0;
-    padding-left: 24px;
-    color: #fbfb03;
-    text-shadow: 5px 5px rgba(0,0,0,0.7);
+#logo .logo-img{
+    height: 60px;
+    margin-right: 64px;
 }
 
 #nav {
-    display: block;
-    position: sticky;
-    position: -webkit-sticky;
-    top: 0;
-    background-image: url(../img/stone.jpg);
-    background-size: 80px;
-    list-style: none;
-    text-align: center;
-    padding-bottom: 6px;
-    padding-top: 6px;
-    box-shadow: 0 8px 8px rgba(0,0,0,0.6);
-    z-index: 1;
+    display: inline-block;
+    list-style-type: none;
 }
 
 #nav li {
-    display: inline-block;
-    padding-left: 12px;
-    padding-right: 8px;
-    border-radius: 10px;
-    transition: .3s ease;
-    margin: 0;
+    display: block;
+    float: left;
+}
+
+#nav a:hover {
+    background-color: #cc0404;
 }
 
 #nav a {
+    padding: 0 20px;
     display: inline-block;
-    font-size: 48px;
-    line-height: 30px;
-    padding-bottom: 12px;
     text-decoration: none;
     color: #fff;
-    transition: .3s ease;
-    text-shadow: 3px 3px #000;
+    line-height: 60px;
+    font-weight: bold;
+    transition: .2s;
 }
 
-#nav li:first-child a{
-    font-size: 32px;
-    padding: 5px 4px 8px 0;
+#header .search-btn {
+    position:absolute;
+    top: 0;
+    right: 0;
+    line-height: 60px;
+    padding: 0 24px;
+    transition: .2s;
 }
 
-#nav img {
-    max-width: 22px;
-    margin-right: 10px;
-    box-shadow: 0 0 3px rgba(0,0,0,0.8);
+#header .search {
+    color: #fff;
+    font-size: 18px;
 }
 
-#nav li:last-child img {
-    box-shadow: none;
-}
-
-#nav li:hover {
-    background-color: #fbfb03;
-    box-shadow: 0 0 12px rgba(0,0,0,0.7);
-}
-
-#nav li:hover a {
-    color: #000;
-    text-shadow: none;
+#header .search-btn:hover {
+    background-color: #cc0404;
 }
 
 /* CONTENT  */
+#content {
+    margin-top: 60px;
+}
 
 #content .content-section {
     width: 1170px;
-    max-width: 90%;
-    padding: 40px 18px;
+    max-width: 100%;
+    padding: 0 20px;
     margin-left: auto;
     margin-right: auto;
 }
 
 #content .section-heading {
-    color: #fbfb03;
-    font-size: 48px;
-    font-weight: bold;
+    font-size: 32px;
+    font-weight:lighter;
     text-transform: uppercase;
     letter-spacing: 2px;
     text-align: center;
-    padding: 32px 0;
-    /* cursor: default; */
-    text-shadow: 3px 3px #000;
+    padding: 64px 0 32px;
+    cursor: default;
 }
 
-#content .section-info {
+#content .section-sub-heading {
+    font-size: 24px;
     text-align: center;
+    margin-top: -20px;
+    padding-bottom: 32px;
+    color: #e21428;
 }
 
-#home {
-    background-image: url(../img/sky.jpg);
-    background-size: cover;
-    background-position: top;
+/* PRODUCT SECTION  */
+#product .list-row {
+    overflow: hidden;
+    margin: 0 -16px;
 }
 
-#home .home-heading {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#home .section-heading {
-    padding-left:  20px;
-    padding-right: 20px;
-}
-
-#home .amongus {
-    display: inline-block;
-    background-image: url(../img/meme/amongus-twerk.gif);
-    background-size: 48px;
-    width: 48px;
-    height: 48px;
-}
-
-/* DISCORD */
-
-#discord{
-    box-shadow: 0 0 14px #000;
-    padding: 14px 0;
-    background-color: #292b2f;
-    text-align: center;
-    max-width: 400px;
-    margin: 60px auto 20px;
-    border-radius: 14px;
-}
-
-#social .container {
-    display: flex;
-    max-width: 90%;
-    margin: 12px auto 0;
-    background-color: #2f3136;
-    justify-content: center;
-    padding: 8px 0 4px;
-    border-radius: 15px;
-    transition: .2s ease;
-}
-
-#discord .container:hover {
-    background-color: #34373C;
-}
-
-#discord .container:hover .status {
-    color: #fff;
-}
-
-#discord .discord-logo {
-    font-size: 36px;
-    color: #5865F2;
-}
-
-#discord .discord-avt {  
-    position: relative;
-}
-
-#discord img {
-    max-width: 80px;
-    border-radius: 40px;
-}
-
-#discord .green-dot-wrap {
-    position: absolute;
-    background-color: #2f3136;
-    top: 54px;
-    left: 54px;
-    width: 26px;
-    height: 26px;
-    border-radius: 13px;
-}
-
-#discord .green-dot {
-    position: absolute;
-    background-color: #3ba55d;
-    top: 6px;
-    left: 6px;
-    width: 14px;
-    height: 14px;
-    border-radius: 7px;
-}
-
-#discord .online-status {
-    position:absolute;
-    display: none;
-    background-color: #18191c;
-    top: -42px;
-    left: -28px;
-    border-radius: 5px;
-    transition: .2s ease;
-}
-
-#discord .online-status p {
-    font-size: 20px;
-    color: #fff;
-    padding: 2px 12px 10px;
-}
-
-#discord .green-dot:hover .online-status {
-    display: block;
-}
-
-#discord .discord-info {
-    margin-left: 18px;
-    margin-top: auto;
-    margin-bottom: auto;
-    text-align: left;
-    line-height: 24px;
-}
-
-#discord .discord-name {
-    font-size: 34px;
-    padding-bottom: 4px;
-    color: #fbfb03;
-    text-shadow: 2px 2px rgba(0,0,0,0.8);
-}
-
-#discord .status {
-    color: #b9bbbe;
-    font-size: 26px;
-    font-weight: 100;
-    text-shadow: 2px 2px rgba(0,0,0,0.8);
-    transition: .3s ease;
-}
-
-#discord .status span {
-    font-weight: 700;
-}
-
-/* YOUTUBE  */
-
-#youtube {
-    padding: 14px 0 20px;
-    background-color: #0f0f0f;
-    text-align: center;
-    max-width: 400px;
-    margin: 16px auto 40px;
-    border-radius: 15px;
-    box-shadow: 0 0 14px #000;
-}
-
-#youtube .container {
-    background-color: #202020;
-    padding-left: 12px;
-    padding-right: 12px;
-}
-
-#youtube .youtube-logo {
-    font-size: 36px;
-    color: #fff;
-}
-
-#youtube .youtube-logo i {
-    color: #ff0000;
-}
-
-#youtube img {
-    cursor: pointer;
-    max-width: 80px;
-    border-radius: 40px;
-}
-
-#youtube .youtube-info {
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: left;
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-left: 18px;
-}
-
-#youtube .channel-name {
-    display: inline-block;
-    font-size: 22px;
-    text-shadow: none;
-    font-weight: 500;
-    cursor: pointer;
-    margin-bottom: 2px;
-}
-
-#youtube .subscriber {
-    font-size: 16px;
-    font-weight: 100;
-    text-shadow: none;
-    color: #aaa;
-}
-
-#youtube .sub-btn {
-    max-width: 120px;
-    margin: auto 0;
-    font-family: Arial, Helvetica, sans-serif;
-    margin-right: 3px;
-}
-
-#youtube .sub-btn a {
-    display: block;
-    font-size: 14px;
-    text-transform: uppercase;
-    text-shadow: none;
-    font-weight: 500;
-    cursor: pointer;
-    padding: 6px 10px;
-    box-shadow: 0 0 8px #cc0000;
-    font-weight: bold;
-    background-color: #cc0000;
-    border-radius: 5px;
-}
-
-#youtube .sub-btn a span {
-    display: inline-block;
-}
-
-#youtube .sub-btn a:hover {
-    background-color: #e06666;
-}
-
-#youtube .container:hover {
-    background-color: #373737;
-}
-
-#grass-layer {
-    width: 100%;
-    height: 80px;
-    background-image: url(../img/grass.jpg);
-    background-size: 80px;
-}
-
-/* MAP  */
-
-#maps {
-    background-image: url(../img/dirt.jpg);
-    background-size: 80px;
+#product .car-list {
     padding-bottom: 48px;
 }
 
-#maps .section-heading {
-    padding-top: 0;
+#product .car-item {
+    width: 33.33333%;
+    float: left;
+    padding: 0 16px 32px;
 }
 
-#maps .content-section {
-    background-color: #292b2f;
-    box-shadow: 0 0 15px #000;
-    border-radius: 15px;
-    padding-bottom: 32px;
+#product .car-box {
+    transition: .5s;
+    border-bottom: #e21428 solid 2px;
+    cursor: pointer;
 }
 
-#maps .map-section {
-    max-width: 86%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 12px;
-    background-color: #34373C;
-    display: flex;
-    border-radius: 10px;
-    box-shadow: 0 0 15px #000;
+#product .car-img-frame {
+    overflow: hidden;
 }
 
-#maps .map-section:hover {
-}
-
-#maps .map-img {
-    max-width: 45%;
-    height: 100%;
-    margin: 20px 24px;
-    border-radius: 10px;
-}
-
-#maps .map-right {
-    margin: 20px 0;
-    padding-right: 24px;
+#product .car-img {
     width: 100%;
-}
-
-#maps .map-info {
-}
-
-#maps .map-name {
-    color: #fbfb03;
-}
-
-#maps .map-download-btn {
-    line-height: 20px;
-    display: inline-block;
-    margin-top: 16px;
-    color: #ff0000;
-    padding: 0 12px 16px;
-    border-radius: 5px;
-    transition: .2s;
-    cursor: pointer;
-}
-
-#maps .button-wrapper {
-    text-align: center;
-}
-
-#maps .map-download-btn i {
-    font-size: 20px;
-    padding-right: 8px;
-}
-
-/* COMMAND */
-#command {
-    position: relative;
-    background-image: url(../img/stone.jpg);
-    background-size: 80px;
-}
-
-#command .section-info {
-    display: none;
-    margin-bottom: 16px;
-}
-
-#command .special-text {
-    text-align: center;
-    padding-bottom: 12px;
-}
-
-#command .special-text p {
-    font-size: 28px;
-}
-
-#command .special-text span {
-    font-size: 36px;
-    color: lightgreen;
-}
-
-#command .command-section p {
     display: block;
-    padding: 12px;
-    margin-bottom: 8px;
-    background-color: #292b2f;
-    border-radius: 15px;
+    transition: .5s;
 }
 
-/* COMMAND ORE AREA  */
-.ore {
-    background-size: 80px;
-    position: absolute;
-    width: 80px;
-    height: 80px;
-    cursor: url('../img/pickaxe.png'),auto;
+#product .car-body {
+    padding: 8px 16px 18px;
 }
 
-.meme {
-    width: 100% !important;
-    height: 100% !important;
-    background-size: cover !important;
-    background-repeat: no-repeat;
-    transition: 1s ease;
-    opacity: 0;
-}
-
-#command .coal {
-    background-image: url(../img/coal_ore.png);
-}
-
-#command .iron {
-    background-image: url(../img/iron_ore.png);
-}
-
-#command .diamond {
-    background-image: url(../img/diamond_ore.png);
-}
-
-#datapack .diamond {
-    background-image: url(../img/diamond_deepslate.png);
-}
-
-#bedrock .diamond {
-    background-image: url(../img/bedrock_diamond.png);
-}
-
-/* coal1  */
-#command .coal1 {
-    top: 0;
-    left: 0;
-}
-#command .coal1:hover .meme {
-    opacity: 1;
-}
-
-#command .coal1 .meme {
-    background-image: url(../img/meme/anhban1.png);
-}
-
-/* coal2  */
-#command .coal2 {
-    top: 0;
-    left: 80px;
-}
-#command .coal2:hover .meme {
-    opacity: 1;
-}
-#command .coal2 .meme {
-    background-image: url(../img/meme/anhban2.png);
-}
-
-/* coal 3 */
-#command .coal3 {
-    top: 80px;
-    right: 480px;
-}
-#command .coal3:hover .meme {
-    opacity: 1;
-}
-#command .coal3 .meme {
-    background-image: url(../img/meme/cat.jpg);
-}
-
-/* coal 4 */
-#command .coal4 {
-    top: 640px;
-    right: 0;
-}
-#command .coal4:hover .meme {
-    opacity: 1;
-}
-#command .coal4 .meme {
-    background-image: url(../img/meme/tienbip.jpg);
-}
-
-/* coal 5 */
-#command .coal5 {
-    top: 960px;
-    left: 80px;
-}
-#command .coal5:hover .meme {
-    opacity: 1;
-}
-#command .coal5 .meme {
-    background-image: url(../img/meme/khabanh.gif);
-}
-
-#command .iron1 {
-    top: 720px;
-    left: 0;
-}
-#command .iron1:hover .meme {
-    opacity: 1;
-}
-#command .iron1 .meme {
-    background-image: url(../img/meme/booty-among-us.gif);
-}
-
-#command .iron2 {
-    top: 240px;
-    left: 80px;
-}
-#command .iron2:hover .meme {
-    opacity: 1;
-}
-#command .iron2 .meme {
-    background-image: url(../img/meme/thayhuan.gif);
-}
-
-#command .iron3 {
-    top: 400px;
-    right: 0px;
-}
-#command .iron3:hover .meme {
-    opacity: 1;
-}
-#command .iron3 .meme {
-    background-image: url(../img/meme/confusedcat.jpg);
-}
-
-#command .iron4 {
-    top: 400px;
-    right: 80px;
-}
-#command .iron4:hover .meme {
-    opacity: 1;
-}
-#command .iron4 .meme {
-    background-image: url(../img/meme/yelling.jpg);
-}
-
-#command .iron5 {
-    bottom: 400px;
-    right: 80px;
-}
-#command .iron5:hover .meme {
-    opacity: 1;
-}
-#command .iron5 .meme {
-    background-image: url(../img/meme/dawok.jpg);
-}
-
-#command .diamond1 {
-    bottom: 0;
-    right: 80px;
-}
-#command .diamond1:hover .meme {
-    opacity: 1;
-}
-#command .diamond1 .meme {
-    background-image: url(../img/meme/superidol.gif);
-}
-
-#command .diamond2 {
-    bottom: 80px;
-    left: 0;
-}
-#command .diamond2:hover .meme {
-    opacity: 1;
-}
-#command .diamond2 .meme {
-    background-image: url(../img/meme/cutmeoff.gif);
-}
-
-#command .diamond3 {
-    bottom: 240px;
-    right: 0;
-}
-#command .diamond3:hover .meme {
-    opacity: 1;
-}
-#command .diamond3 .meme {
-    background-image: url(../img/meme/ronaldo.gif);
-}
-
-#datapack .diamond4 {
-    top: 160px;
-    left: 160px;
-}
-#datapack .diamond4:hover .meme {
-    opacity: 1;
-}
-#datapack .diamond4 .meme {
-    background-image: url(../img/meme/dawokgif.gif);
-}
-
-#datapack .diamond5 {
-    top: 240px;
-    left: 80px;
-}
-#datapack .diamond5:hover .meme {
-    opacity: 1;
-}
-#datapack .diamond5 .meme {
-    background-image: url(../img/meme/shang-abi.gif);
-    height: 100%;
-}
-
-#datapack .diamond6 {
-    top: 240px;
-    right: 160px;
-}
-#datapack .diamond6:hover .meme {
-    opacity: 1;
-}
-#datapack .diamond6 .meme {
-    background-image: url(../img/meme/chimo.gif);
-}
-
-#datapack .diamond7 {
-    top: 480px;
-    right: 240px;
-}
-#datapack .diamond7:hover .meme {
-    opacity: 1;
-}
-#datapack .diamond7 .meme {
-    background-image: url(../img/meme/tienbip.gif);
-}
-
-#datapack .diamond8 {
-    top: 400px;
-    left: 320px;
-}
-#datapack .diamond8:hover .meme {
-    opacity: 1;
-}
-#datapack .diamond8 .meme {
-    background-image: url(../img/meme/amongus-twerk.gif);
-}
-
-#bedrock .diamond9 {
-    top: 0;
-    right: 80px;
-}
-#bedrock .diamond9:hover .meme {
-    opacity: 1;
-}
-
-#bedrock .diamond9 .meme {
-    display: flex;
-}
-
-#bedrock .diamond9 a {
-    display: inline-block;
+#product .car-name {
+    text-transform: uppercase;
     text-align: center;
-    background-color: #34373C;
-    font-size: 14px;
-    font-family: 'Exo';
-    text-decoration: none;
-    color: #fbfb03;
-    margin: auto 0;
-    padding: 11px 0;
-    border-radius: 5px;
-}
-
-#bedrock .diamond9 i {
-    text-shadow: none;
-    font-size: 14px;
-}
-
-/* END COMMAND ORE  */
-
-/* DATAPACK */
-#datapack {
-    background-image: url(../img/deepslate.png);
-    background-size: 80px;
-    position: relative;
-}
-
-#datapack .datapack-section {
-    max-width: 400px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 12px;
-    background-color: #34373C;
-    display: flex;
-    border-radius: 10px;
-    box-shadow: 0 0 15px #000;
-    text-align: center;
-    cursor: pointer;
+    font-size: 16px;
+    color: #000;
     transition: .2s;
 }
 
-#datapack .datapack-img {
-    max-width: 60px;
-    margin: 12px;
+#product .car-consume {
+    padding-top: 5px;
 }
 
-#datapack .datapack-name {
+#product .car-price {
     display: inline-block;
-    margin: auto 0;
-    font-size: 28px;
-    padding-bottom: 12px;
-    cursor: pointer;
-    font-weight: lighter;
+    padding-top: 5px;
+    color: #e21428;
 }
 
-#datapack .datapack-section:hover {
-    background-color: #292b2f;
-}
-
-#datapack a {
-    display: block;
-    cursor: pointer;
-    max-width: 400px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 12px;
-    border-radius: 10px;
-}
-
-/* BEDROCK */
-#bedrock {
-    position: relative;
-    width: 100%;
-    height: 80px;
-    background-image: url(../img/bedrock.png);
-    background-size: 80px;
-}
-
-#bedrock i {
-    font-size: 18px;
-    text-shadow: 3px 3px 5px #000;
-    color: #fbfb03;
-}
-
-#bedrock p {
-    text-align: center;
-    padding-top: 8px;
-    text-shadow: 3px 3px 5px #000;
-    color: #fbfb03;
-}
-
-#bedrock p, #bedrock a {
-    font-size: 28px;
-}
-
-#bedrock a {
+#product .car-price span::after {
+    content: 'đ';
     text-decoration: underline;
-    color: #fbfb03;
-    cursor: pointer;
-    text-shadow: none;
 }
 
-#bedrock .counter {
-    text-align: center;
+#product .car-box:hover .car-img{
+    transform: scale(1.1);
 }
 
-#bedrock span {
-    display: inline-block;
-    font-size: 26px;
+#product .car-box:hover {
+    box-shadow: 0 0 12px rgba(0,0,0,0.5);
+}
+
+#product .car-name:hover {
+    color: #cc0404;
+}
+
+/* Price Table Section  */
+#price-table .section-heading {
     color: #fff;
-    text-shadow: 2px 2px #000;
-    padding-bottom: 8px;
 }
 
-#bedrock img {
+#price-table .section-sub-heading {
+    font-style:italic ;
+}
+
+#price-table {
+    background-color: #000;
+    width: 100%;
+}
+
+#price-table .price-table {
+    width: 1170px;
+    max-width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 32px 20px 64px;
+}
+
+#price-table table {
+    width: 100%;
+}
+
+#price-table th, 
+#price-table tr:nth-child(even){
+    background-color: #eee;
+}
+
+#price-table tr:nth-child(odd){
+    background-color: #fff;
+}
+
+#price-table table,
+#price-table table td,
+#price-table table th {
+    border-collapse: collapse;
+    border: #bbb 1px solid;
+    text-align: center;
+    padding: 12px;
+}
+
+#price-table table th {
+    font-size: 18px;
+}
+
+#price-table table .car-title {
+    color: #e21428;
+    font-size: 18px;
+    background-color: white;
+}
+
+/* Register section  */
+#register-section {
+    margin: 64px 0;
+    
+}
+
+#register-section .register-content {
+    padding-right: 32px;
+    border: 2px solid #bbb;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    border-radius: 10px;
+}
+
+#register-section .section-heading {
+    padding: 32px 0;
+}
+
+#register-section.content-section {
+    width: 1000px;
+
+}
+
+#register-section .register-label {
     display: inline-block;
-    padding-top: 8px;
+    width: 25%;
+    line-height: 36px;
+    padding-left: 32px;
+    padding-bottom: 18px;
+}
+
+#register-section .register-label i {
+    padding-right: 4px;
+}
+
+#register-section .register-input {
+    display: inline-block;
+    width: 74.5%;
+    height: 36px;
+    margin-bottom: 18px;
+    padding-left: 12px;
+    border-radius: 3px;
+    border: 1px solid #bbb;
+    transition: .1s;
+}
+
+#register-section .register-input:hover {
+    background-color: #eee;
+}
+
+#register-section .register-input:focus {
+    box-shadow: 0 0 4px rgba(0,0,0,0.4);
+    outline: 0;
+}
+
+#register-section select {
+    color: rgba(0,0,0,0.7);
+}
+
+#register-section .submit-btn {
+    text-align: center;
+    padding-bottom: 48px;
+}
+
+#register-section .register-submit {
+    padding: 0 18px;
+    border: none;
+    background-color: #111;
+    border-radius: 5px;
+    color: #fff;
+    letter-spacing: 1px;
+    line-height: 38px;
+    cursor: pointer;
+    transition: .2s ease;
+}
+
+#register-section .register-submit:hover {
+    background-color: #ccc;
+    color: #000;
+}
+
+/* CONTACT SECTION  */
+
+#contact-section {
+    background-color: #ddd;
+    box-shadow: 0 0 12px rgba(0,0,0,0.4);
+}
+
+#contact-section .contact-content {
+    display: flex;
+    padding: 20px 0;
+}
+
+#contact-section .contact-left {
+    width: 50%;
+    padding: 32px 16px;
+}
+
+#contact-section .hotline-heading {
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 1px;
+    padding-bottom: 12px;
+}
+
+#contact-section .hotline-infor {
+    color: #333;
+    line-height: 24px;
+}
+
+#contact-section .contact-right {
+    width: 50%;
+}
+
+#contact-section .contact-right-content {
+    border-left: 2px solid #fff;
+    color: #333;
+    padding: 16px 32px;
+    margin: 16px 0;
+}
+
+#contact-section .contact-social {
+    display: flex;
+}
+
+#contact-section .contact-social p {
+    padding-right: 16px;
+    line-height: 24px;
+}
+
+#contact-section .contact-social a {
+    font-size: 24px;
+    color: #333;
+    padding-right: 8px;
+    transition: .1s;
+}
+
+#contact-section .contact-social a:hover {
+    opacity: 0.7;;
+}
+
+#contact-section .contact-address {
+    padding-top: 12px;
+    line-height: 24px;
+}
+/* CONTACT END  */
+
+/* FOOTER  */
+#footer {
+    width: 100%;
+    height: 48px;
+    background-color: #000;
+}
+
+#footer p {
+    text-align: center;
+    color: #aaa;
+    padding: 15px 0;
 }
