@@ -410,7 +410,9 @@ p, h1, h2, h3, a {
     box-shadow: 0 0 15px #000;
 }
 
-#maps .map-section:hover {
+#maps .map-section:hover .map-img {
+    transform: scale(1.03);
+    box-shadow: 0 0 12px #000;
 }
 
 #maps .map-img {
@@ -418,6 +420,7 @@ p, h1, h2, h3, a {
     height: 100%;
     margin: 20px 24px;
     border-radius: 10px;
+    transition: .3s ease;
 }
 
 #maps .map-right {
@@ -451,6 +454,14 @@ p, h1, h2, h3, a {
 #maps .map-download-btn i {
     font-size: 20px;
     padding-right: 8px;
+}
+
+#maps .pass-giai-nen {
+    text-align: center;
+}
+
+#maps .pass-giai-nen span {
+    color: #ff0000;
 }
 
 /* COMMAND */
