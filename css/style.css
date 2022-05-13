@@ -358,7 +358,7 @@ p, h1, h2, h3, a {
     font-weight: bold;
     background-color: #cc0000;
     border-radius: 5px;
-    text-align: right;
+    text-align: center;
 }
 
 #youtube .sub-btn a span {
