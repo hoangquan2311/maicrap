@@ -266,7 +266,7 @@ p, h1, h2, h3, a {
 #discord .discord-name {
     font-size: 34px;
     padding-bottom: 4px;
-    color: #fbfb03;
+    color: white;
     text-shadow: 2px 2px rgba(0,0,0,0.8);
 }
 
